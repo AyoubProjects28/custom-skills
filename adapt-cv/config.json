@@ -1,0 +1,11 @@
+{
+  "NOTION_TOKEN": "",
+  "NOTION_DB_ID": "",
+  "STATUS_PROP": "Status",
+  "TO_APPLY_TAG": "To Apply",
+  "CV_CREATED_TAG": "CV created",
+  "JD_PROP": "Job Description",
+  "COMPANY_PROP": "Company",
+  "ROLE_PROP": "Position",
+  "URL_PROP": "Job URL"
+}
