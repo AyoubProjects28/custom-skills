@@ -148,9 +148,11 @@ cloud/datacenter IP ranges — see the Setup section below.
   Cowork/Claude Desktop with skills enabled).
 - **Python 3.10+** on the machine that will run the scraper (your own
   computer — see below for why).
-- **`python-jobspy`**, installed with:
+- **`python-jobspy`**, the only external Python dependency in this repo
+  (everything else — `engine.py`, `fetch_to_apply.py`, `aggregate.py` — is
+  pure standard library, nothing to install). Install it with:
   ```bash
-  python -m pip install -U python-jobspy
+  python -m pip install -r requirements.txt
   ```
 - **LibreOffice** and **poppler** (`pdfinfo`, `pdftotext`) available in
   whatever environment runs `adapt-cv/engine.py` — this is what renders
@@ -216,7 +218,12 @@ simplest choice.
 ### 6. Configure `adapt-cv` for Notion batch mode (optional)
 
 If you want `/adapt-cv --to-apply` to work (tailor a CV for every "To
-Apply" row in Notion automatically), fill in `adapt-cv/config.json`:
+Apply" row in Notion automatically), copy the template and fill in your
+own values:
+
+```bash
+cp adapt-cv/config.example.json adapt-cv/config.json
+```
 
 ```json
 {
@@ -232,10 +239,11 @@ Apply" row in Notion automatically), fill in `adapt-cv/config.json`:
 }
 ```
 
-**Never commit this file with real values filled in.** If you fork or push
-changes to this repo, keep `config.json` blank (as it ships) or add it to
-your local `.gitignore`. GitHub's push protection will actually block a
-push containing a Notion token if you forget — that's a feature, not a bug.
+**`adapt-cv/config.json` is listed in `.gitignore` on purpose** — only
+`config.example.json` (blank) is tracked by this repo, so your real token
+can never end up in a commit by accident. GitHub's push protection would
+also block a push containing a live Notion token, as a last-resort
+backstop, but the gitignore is the actual fix.
 
 If you skip this step, batch mode still works via a one-time fallback that
 uses your Notion MCP connector instead of a direct API token — slightly

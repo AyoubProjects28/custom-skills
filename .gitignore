@@ -1,0 +1,14 @@
+# Your real Notion credentials — copy config.example.json to config.json
+# and fill it in locally. config.json itself is intentionally never tracked
+# so a real token can't be committed by accident.
+adapt-cv/config.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Scratch output from the scraper / aggregation runs
+*_run_jobs.json
+_scrape_data/

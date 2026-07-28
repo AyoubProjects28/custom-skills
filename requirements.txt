@@ -1,0 +1,14 @@
+# Python dependencies for this repo.
+#
+# adapt-cv/engine.py, adapt-cv/fetch_to_apply.py and
+# job-market-analysis/scripts/aggregate.py are pure standard library —
+# nothing to install for them.
+#
+# The only external dependency is python-jobspy, used by
+# shared-tools/linkedin_jobs_free.py to scrape LinkedIn/Indeed/Glassdoor/
+# Google for free. It pulls in pandas as its own dependency.
+#
+# Install with:
+#   python -m pip install -r requirements.txt
+
+python-jobspy>=1.1.55
