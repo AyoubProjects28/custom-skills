@@ -1,6 +1,6 @@
 ---
 name: ai-usage-coach
-description: Quick audit of how the user is using Claude on a given project, at any stage: surface, model, workspace, skills, verification, scheduled tasks, sub-agents, memory. One-screen plan, then a rules doc, then execution on approval.
+description: "Quick audit of how the user is using Claude on a given project, at any stage: surface, model, workspace, skills, verification, scheduled tasks, sub-agents, memory. One-screen plan, then a rules doc, then execution on approval."
 ---
 
 # AI Usage Coach
