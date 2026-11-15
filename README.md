@@ -14,7 +14,16 @@ a tailored CV + cover letter + outreach email for each one.
   letter) to a specific job description, one document at a time or in
   batch over every "To Apply" row in your Notion CRM.
 
-All three are designed to be **generic**: nothing in this repo contains
+Plus one standalone skill, unrelated to the pipeline:
+
+- **`ai-usage-coach`** — run it at any stage of a project for a one-screen
+  audit of how you use Claude on it: which surface (Desktop, Claude Code,
+  mobile, scheduled tasks), which model for which task, workspace and skills
+  hygiene, verification criteria, when to use sub-agents, and what to save to
+  memory. It then offers a rules doc for the project and applies the changes
+  on approval.
+
+All four are designed to be **generic**: nothing in this repo contains
 anyone's personal data. Your CV, your career facts, your Notion database
 IDs, and your API tokens all live in files you create locally, outside this
 repo, following the templates provided here.
@@ -348,6 +357,7 @@ Once setup is done, typical prompts:
 /adapt-cv --cover-letter [paste a job description]
 /adapt-cv --to-apply
 /adapt-cv --cover-letter --to-apply --isolate
+/ai-usage-coach
 ```
 
 Or in plain language: "analyze the job market in Paris," "find me
